@@ -11,7 +11,7 @@
     <body>
         
         <% @posts.each do |post| %>
-         <div class="post_wrapper">
+         <div class="page_wrapper">
              <h1 class="title"><%= link_to post.title, post %></h1>
              <p class="date">submitted <%= time_ago_in_words(post.created_at) %> ago</p>
              <p class="body"><%= truncate(post.body, length:100) %></p>
