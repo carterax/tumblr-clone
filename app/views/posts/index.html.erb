@@ -1,21 +1,7 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="	">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Untitled</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="author" href="humans.txt">
-    </head>
-    <body>
-        
-        <% @posts.each do |post| %>
-         <div class="page_wrapper">
-             <h1 class="title"><%= link_to post.title, post %></h1>
-             <p class="date">submitted <%= time_ago_in_words(post.created_at) %> ago</p>
-             <p class="body"><%= truncate(post.body, length:100) %></p>
-         </div>
-         <% end %>
-    </body>
-</html>
+<div class="page_wrapper" style="width: 800px; margin: 0 auto;">
+<% @posts.each do |post| %>
+     <h1 class="title"><%= link_to post.title, post %></h1>
+     <p class="date">submitted <%= time_ago_in_words(post.created_at) %> ago</p>
+     <p class="body"><%= truncate(post.body, length:100) %></p>
+<% end %>
+</div>
